@@ -1,25 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './dashboard/Layout/header';
+import Sidebar from './dashboard/Layout/sidebar';
+import MainContact from './dashboard/RouteLink';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <div className="app">
+        <Sidebar />
+        <div className="content">
+          <MainContact />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+// import React, { useState } from 'react';
+// import './App.css';
+// import FileExplorer from './dashboard/cmp/FileExplorer';
+// import FileViewer from './dashboard/cmp/FileViewer';
+// import fileSystem from './dashboard/data/fileSystem.json';
+
+// const App = () => {
+//   const [selectedFile, setSelectedFile] = useState(null);
+
+//   return (
+//     <div className="app-container">
+//       <aside className="sidebar">
+//         <FileExplorer node={fileSystem} onFileClick={setSelectedFile} />
+//       </aside>
+//       <main className="content">
+//         <FileViewer file={selectedFile} />
+//       </main>
+//     </div>
+//   );
+// };
+
+// export default App;
