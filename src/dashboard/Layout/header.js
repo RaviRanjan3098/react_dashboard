@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo d-flex align-items-center gap-3">
-                <img src="" alt="Logo" className="img-fluid" />
+                <img src="image/logo1.png" alt="Logo" className="img-fluid" />
             </div>
 
             <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>

@@ -39,6 +39,11 @@ code {
   display: none;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: 40px !important;
+}
+
 .sidebar-links {
   display: flex;
   flex-direction: column;
@@ -212,4 +217,25 @@ code {
   padding: 1rem;
   margin-top: 57px;
   overflow-y: auto;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-weight: bold;
+}
+
+h5 {
+  margin-top: 1rem;
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 1.25rem;
+}
+
+.list-group-item {
+    position: unset !important;
 }

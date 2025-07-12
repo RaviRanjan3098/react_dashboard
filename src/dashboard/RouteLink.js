@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Routes } from 'react-router-dom';
+import { Switch, Route, Routes, Navigate } from 'react-router-dom';
 import Dashboard from './cmp/Dashboard';
 import JobDetail from './cmp/JobDetail';
 import Category from './cmp/Category';
@@ -15,6 +15,7 @@ import Profile from './cmp/Profile';
 const RouteLink = () => {
     return (
         <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/job-detail" element={<JobDetail />} />
             <Route path="/portal" element={<Portal />} />
