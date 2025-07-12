@@ -236,6 +236,6 @@ h5 {
   padding-left: 1.25rem;
 }
 
-.list-group-item {
+.list-group-item , .card {
     position: unset !important;
 }
